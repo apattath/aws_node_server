@@ -54,5 +54,5 @@ app.use(function(err, req, res, next){
 
 console.log('starting the Express (NodeJS) Web server');
 app.listen(8080);
-console.log('Webserver is listening on port 8080');
+console.log('Webserver is listening port 8080');
 
