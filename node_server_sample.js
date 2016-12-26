@@ -25,32 +25,32 @@ var greetingSchema = mongoose.Schema({
 }); 
 var Greeting = mongoose.model('Greeting', greetingSchema);
 
-db = mongoose.connect(dbPath);
+// db = mongoose.connect(dbPath);
 
-mongoose.connection.once('open', function() {
-  var greeting;
-  Greeting.find( function(err, greetings){
-   if( !greetings ){     
-      greeting = new Greeting({ sentence: standardGreeting }); 
-      greeting.save();
-    } 
-  }); 
-});
+// mongoose.connection.once('open', function() {
+  // var greeting;
+  // Greeting.find( function(err, greetings){
+   // if( !greetings ){     
+      // greeting = new Greeting({ sentence: standardGreeting }); 
+      // greeting.save();
+    // } 
+  // }); 
+// });
 
-app.get('/', function(req, res){
-  Greeting.findOne(function (err, greeting) {
-    res.send(greeting.sentence);
-  });
-});
+// app.get('/', function(req, res){
+  // Greeting.findOne(function (err, greeting) {
+    // res.send(greeting.sentence);
+  // });
+// });
 
-app.use(function(err, req, res, next){
-  if (req.xhr) {
-    res.send(500, 'Something went wrong!');
-  }
-  else {
-    next(err);
-  }
-});
+// app.use(function(err, req, res, next){
+  // if (req.xhr) {
+    // res.send(500, 'Something went wrong!');
+  // }
+  // else {
+    // next(err);
+  // }
+// });
 
 console.log('starting the Express (NodeJS) Web server');
 app.listen(8080);
