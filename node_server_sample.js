@@ -29,7 +29,7 @@ var config = {
       "PASS"     : "",
       "HOST"     : "ec2-35-163-222-223.us-west-2.compute.amazonaws.com",  // the domain name of our MongoDB EC2 instance
       "PORT"     : "27017",             // this is the default port mongoDB is listening for incoming queries
-      "DATABASE" : "my_example"         // the name of your database on that instance
+      "DATABASE" : "my_example"         // the name of your database on that instanc
     };
 
 var dbPath  = "mongodb://" + config.USER + ":" +
